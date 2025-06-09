@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,61 +11,49 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: #FDFBF8;
             color: #383434;
         }
-
         .nav-link {
             transition: color 0.3s, border-bottom-color 0.3s;
             border-bottom: 2px solid transparent;
         }
-
-        .nav-link:hover,
-        .nav-link.active {
+        .nav-link:hover, .nav-link.active {
             color: #D9534F;
             border-bottom-color: #D9534F;
         }
-
         .btn-primary {
             background-color: #D9534F;
             color: #FFFFFF;
             transition: background-color 0.3s;
         }
-
         .btn-primary:hover {
             background-color: #C9302C;
         }
-
         .btn-secondary {
             background-color: #5A96E3;
             color: #FFFFFF;
             transition: background-color 0.3s;
         }
-
         .btn-secondary:hover {
             background-color: #4A86D3;
         }
-
         .card {
             background-color: #FFFFFF;
             border: 1px solid #F0EBE3;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
         }
-
         .explanation-panel {
             background-color: #f8f9fa;
             border-left: 3px solid #5A96E3;
         }
-
         .chart-container {
             position: relative;
             width: 100%;
@@ -75,7 +62,6 @@
         }
     </style>
 </head>
-
 <body class="antialiased">
 
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
@@ -96,9 +82,7 @@
         <section id="introduction" class="text-center mb-20">
             <h2 class="text-4xl font-bold mb-4">Understanding Red-Black Trees</h2>
             <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8">
-                A Red-Black Tree is a special type of self-balancing binary search tree. Its primary purpose is to
-                maintain balance during insertions and deletions, ensuring that critical operations remain incredibly
-                efficient, even in the worst-case scenario. This interactive page will help you visualize how it works.
+                A Red-Black Tree is a special type of self-balancing binary search tree. Its primary purpose is to maintain balance during insertions and deletions, ensuring that critical operations remain incredibly efficient, even in the worst-case scenario. This interactive page will help you visualize how it works.
             </p>
             <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div class="card p-6 rounded-lg">
@@ -121,9 +105,8 @@
 
         <section id="properties" class="mb-20">
             <h2 class="text-3xl font-bold text-center mb-10">The 5 Core Properties</h2>
-            <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-12 text-center">
-                These five rules are the foundation of a Red-Black Tree. The tree's algorithm works tirelessly to ensure
-                these properties are never violated, which is how it guarantees its balance and efficiency.
+             <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-12 text-center">
+                These five rules are the foundation of a Red-Black Tree. The tree's algorithm works tirelessly to ensure these properties are never violated, which is how it guarantees its balance and efficiency.
             </p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card p-6 rounded-lg">
@@ -139,17 +122,15 @@
                 <div class="card p-6 rounded-lg">
                     <p class="text-5xl mb-4">👨‍👧‍👦</p>
                     <h3 class="text-xl font-bold mb-2">3. Red Node Children</h3>
-                    <p class="text-gray-600">If a node is Red, both of its children must be Black. No two Red nodes can
-                        be adjacent.</p>
+                    <p class="text-gray-600">If a node is Red, both of its children must be Black. No two Red nodes can be adjacent.</p>
                 </div>
                 <div class="card p-6 rounded-lg">
                     <p class="text-5xl mb-4">📏</p>
                     <h3 class="text-xl font-bold mb-2">4. Black Height</h3>
-                    <p class="text-gray-600">Every path from a given node to any of its descendant NULL leaves contains
-                        the same number of Black nodes.</p>
+                    <p class="text-gray-600">Every path from a given node to any of its descendant NULL leaves contains the same number of Black nodes.</p>
                 </div>
                 <div class="card p-6 rounded-lg col-span-1 md:col-span-2 lg:col-span-1">
-                    <p class="text-5xl mb-4">🍂</p>
+                     <p class="text-5xl mb-4">🍂</p>
                     <h3 class="text-xl font-bold mb-2">5. NULL Leaves</h3>
                     <p class="text-gray-600">All leaves (NULL nodes at the end of paths) are considered Black.</p>
                 </div>
@@ -160,13 +141,13 @@
             <h2 class="text-3xl font-bold text-center mb-10">Interactive Demo</h2>
             <div class="card p-4 sm:p-6 rounded-lg">
                 <div class="flex flex-col sm:flex-row gap-4 mb-6 justify-center items-center">
-                    <input type="number" id="node-value"
-                        class="border-2 border-gray-300 rounded-lg px-4 py-2 w-full sm:w-auto text-center"
-                        placeholder="Enter a number">
-                    <button id="insert-btn"
-                        class="btn-primary px-6 py-2 rounded-lg font-semibold w-full sm:w-auto">Insert</button>
-                    <button id="delete-btn"
-                        class="btn-secondary px-6 py-2 rounded-lg font-semibold w-full sm:w-auto">Delete</button>
+                    <input type="number" id="node-value" class="border-2 border-gray-300 rounded-lg px-4 py-2 w-full sm:w-auto text-center" placeholder="Enter a number">
+                    <button id="insert-btn" class="btn-primary px-6 py-2 rounded-lg font-semibold w-full sm:w-auto">Insert</button>
+                    <button id="delete-btn" class="btn-secondary px-6 py-2 rounded-lg font-semibold w-full sm:w-auto">Delete</button>
+                </div>
+                <!-- New Reset View Button -->
+                <div class="flex justify-center mb-6">
+                    <button id="reset-view-btn" class="btn-secondary px-6 py-2 rounded-lg font-semibold w-full sm:w-auto">Reset View</button>
                 </div>
                 <div class="grid lg:grid-cols-3 gap-6">
                     <div class="lg:col-span-2 chart-container bg-gray-50 rounded-lg border">
@@ -175,8 +156,7 @@
                     <div class="explanation-panel p-4 rounded-lg h-[60vh] overflow-y-auto">
                         <h3 class="font-bold text-lg mb-4">Explanation</h3>
                         <div id="explanation-text" class="space-y-3">
-                            <p class="text-gray-600">Welcome! Enter a number and click 'Insert' to begin building your
-                                Red-Black Tree. The steps will be explained here.</p>
+                            <p class="text-gray-600">Welcome! Enter a number and click 'Insert' to begin building your Red-Black Tree. You can now also **pan by clicking and dragging** on the canvas, and **zoom using your mouse scroll wheel**. The steps will be explained here.</p>
                         </div>
                     </div>
                 </div>
@@ -186,276 +166,275 @@
         <section id="rotations">
             <h2 class="text-3xl font-bold text-center mb-10">Core Mechanism: Rotations</h2>
             <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-12 text-center">
-                Rotations are the fundamental operations used to restructure the tree and maintain balance. They change
-                the tree's shape while preserving the Binary Search Tree property (left child < parent < right child).
-                    </p>
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <div class="card p-6 rounded-lg">
-                            <h3 class="text-2xl font-bold text-center mb-4">Left Rotation</h3>
-                            <div class="flex items-center justify-around font-mono">
-                                <div>
-                                    <p class="text-center mb-2">Before</p>
-                                    <p class="text-center text-2xl">x</p>
-                                    <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
-                                    <p class="text-center">T1&nbsp;&nbsp;&nbsp;y</p>
-                                    <p class="text-center ml-10">/ \</p>
-                                    <p class="text-center ml-10">T2 T3</p>
-                                </div>
-                                <p class="text-3xl mx-4">→</p>
-                                <div>
-                                    <p class="text-center mb-2">After</p>
-                                    <p class="text-center text-2xl">y</p>
-                                    <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
-                                    <p class="text-center">x&nbsp;&nbsp;&nbsp;T3</p>
-                                    <p class="text-center">/ \</p>
-                                    <p class="text-center">T1 T2</p>
-                                </div>
-                            </div>
+                Rotations are the fundamental operations used to restructure the tree and maintain balance. They change the tree's shape while preserving the Binary Search Tree property (left child < parent < right child).
+            </p>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-center mb-4">Left Rotation</h3>
+                    <div class="flex items-center justify-around font-mono">
+                        <div>
+                            <p class="text-center mb-2">Before</p>
+                            <p class="text-center text-2xl">x</p>
+                            <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
+                            <p class="text-center">T1&nbsp;&nbsp;&nbsp;y</p>
+                            <p class="text-center ml-10">/ \</p>
+                            <p class="text-center ml-10">T2 T3</p>
                         </div>
-                        <div class="card p-6 rounded-lg">
-                            <h3 class="text-2xl font-bold text-center mb-4">Right Rotation</h3>
-                            <div class="flex items-center justify-around font-mono">
-                                <div>
-                                    <p class="text-center mb-2">Before</p>
-                                    <p class="text-center text-2xl">y</p>
-                                    <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
-                                    <p class="text-center">x&nbsp;&nbsp;&nbsp;T3</p>
-                                    <p class="text-center">/ \</p>
-                                    <p class="text-center">T1 T2</p>
-                                </div>
-                                <p class="text-3xl mx-4">→</p>
-                                <div>
-                                    <p class="text-center mb-2">After</p>
-                                    <p class="text-center text-2xl">x</p>
-                                    <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
-                                    <p class="text-center">T1&nbsp;&nbsp;&nbsp;y</p>
-                                    <p class="text-center ml-10">/ \</p>
-                                    <p class="text-center ml-10">T2 T3</p>
-                                </div>
-                            </div>
+                        <p class="text-3xl mx-4">→</p>
+                        <div>
+                            <p class="text-center mb-2">After</p>
+                            <p class="text-center text-2xl">y</p>
+                            <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
+                            <p class="text-center">x&nbsp;&nbsp;&nbsp;T3</p>
+                            <p class="text-center">/ \</p>
+                            <p class="text-center">T1 T2</p>
                         </div>
                     </div>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-center mb-4">Right Rotation</h3>
+                    <div class="flex items-center justify-around font-mono">
+                        <div>
+                            <p class="text-center mb-2">Before</p>
+                            <p class="text-center text-2xl">y</p>
+                            <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
+                            <p class="text-center">x&nbsp;&nbsp;&nbsp;T3</p>
+                            <p class="text-center">/ \</p>
+                            <p class="text-center">T1 T2</p>
+                        </div>
+                        <p class="text-3xl mx-4">→</p>
+                        <div>
+                            <p class="text-center mb-2">After</p>
+                            <p class="text-center text-2xl">x</p>
+                            <p class="text-center text-lg">/&nbsp;&nbsp;&nbsp;\</p>
+                            <p class="text-center">T1&nbsp;&nbsp;&nbsp;y</p>
+                            <p class="text-center ml-10">/ \</p>
+                            <p class="text-center ml-10">T2 T3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <script>
-        const RED = 'RED';
-        const BLACK = 'BLACK';
+        document.addEventListener('DOMContentLoaded', () => {
+            const RED = 'RED';
+            const BLACK = 'BLACK';
 
-        class Node {
-            constructor(key, color = RED, parent = null, left = null, right = null) {
-                this.key = key;
-                this.color = color;
-                this.parent = parent;
-                this.left = left;
-                this.right = right;
-                this.x = 0;
-                this.y = 0;
-            }
-        }
-
-        class RedBlackTree {
-            constructor() {
-                this.NIL = new Node(null, BLACK);
-                this.root = this.NIL;
-                this.animationQueue = [];
+            class Node {
+                constructor(key, color = RED, parent = null, left = null, right = null) {
+                    this.key = key;
+                    this.color = color;
+                    this.parent = parent;
+                    this.left = left;
+                    this.right = right;
+                    this.x = 0;
+                    this.y = 0;
+                }
             }
 
-            leftRotate(x) {
-                const y = x.right;
-                this.animationQueue.push({ type: 'text', msg: `Performing Left Rotation on Node ${x.key}.` });
-                x.right = y.left;
-                if (y.left !== this.NIL) {
-                    y.left.parent = x;
+            class RedBlackTree {
+                constructor() {
+                    this.NIL = new Node(null, BLACK);
+                    this.root = this.NIL;
+                    this.animationQueue = [];
                 }
-                y.parent = x.parent;
-                if (x.parent === null) {
-                    this.root = y;
-                } else if (x === x.parent.left) {
-                    x.parent.left = y;
-                } else {
-                    x.parent.right = y;
-                }
-                y.left = x;
-                x.parent = y;
-                this.animationQueue.push({ type: 'draw' });
-            }
 
-            rightRotate(x) {
-                const y = x.left;
-                this.animationQueue.push({ type: 'text', msg: `Performing Right Rotation on Node ${x.key}.` });
-                x.left = y.right;
-                if (y.right !== this.NIL) {
-                    y.right.parent = x;
-                }
-                y.parent = x.parent;
-                if (x.parent === null) {
-                    this.root = y;
-                } else if (x === x.parent.right) {
-                    x.parent.right = y;
-                } else {
-                    x.parent.left = y;
-                }
-                y.right = x;
-                x.parent = y;
-                this.animationQueue.push({ type: 'draw' });
-            }
-
-            insert(key) {
-                this.animationQueue = [];
-                const node = new Node(key, RED, null, this.NIL, this.NIL);
-                this.animationQueue.push({ type: 'text', msg: `Inserting ${key} as a Red node.` });
-
-                let y = null;
-                let x = this.root;
-
-                while (x !== this.NIL) {
-                    y = x;
-                    if (node.key < x.key) {
-                        x = x.left;
-                    } else if (node.key > x.key) {
-                        x = x.right;
+                leftRotate(x) {
+                    const y = x.right;
+                    this.animationQueue.push({ type: 'text', msg: `Performing Left Rotation on Node ${x.key}.` });
+                    x.right = y.left;
+                    if (y.left !== this.NIL) {
+                        y.left.parent = x;
+                    }
+                    y.parent = x.parent;
+                    if (x.parent === null) {
+                        this.root = y;
+                    } else if (x === x.parent.left) {
+                        x.parent.left = y;
                     } else {
-                        this.animationQueue.push({ type: 'text', msg: `Node with key ${key} already exists.` });
+                        x.parent.right = y;
+                    }
+                    y.left = x;
+                    x.parent = y;
+                    this.animationQueue.push({ type: 'draw' });
+                }
+
+                rightRotate(x) {
+                    const y = x.left;
+                    this.animationQueue.push({ type: 'text', msg: `Performing Right Rotation on Node ${x.key}.` });
+                    x.left = y.right;
+                    if (y.right !== this.NIL) {
+                        y.right.parent = x;
+                    }
+                    y.parent = x.parent;
+                    if (x.parent === null) {
+                        this.root = y;
+                    } else if (x === x.parent.right) {
+                        x.parent.right = y;
+                    } else {
+                        x.parent.left = y;
+                    }
+                    y.right = x;
+                    x.parent = y;
+                    this.animationQueue.push({ type: 'draw' });
+                }
+                
+                insert(key) {
+                    this.animationQueue = [];
+                    const node = new Node(key, RED, null, this.NIL, this.NIL);
+                    this.animationQueue.push({ type: 'text', msg: `Inserting ${key} as a Red node.` });
+
+                    let y = null;
+                    let x = this.root;
+
+                    while (x !== this.NIL) {
+                        y = x;
+                        if (node.key < x.key) {
+                            x = x.left;
+                        } else if (node.key > x.key) {
+                            x = x.right;
+                        } else {
+                                this.animationQueue.push({ type: 'text', msg: `Node with key ${key} already exists.` });
+                                return this.animationQueue;
+                        }
+                    }
+
+                    node.parent = y;
+                    if (y === null) {
+                        this.root = node;
+                    } else if (node.key < y.key) {
+                        y.left = node;
+                    } else {
+                        y.right = node;
+                    }
+
+                    this.animationQueue.push({ type: 'highlight', node: node });
+
+                    if (node.parent === null) {
+                        node.color = BLACK;
+                        this.animationQueue.push({ type: 'text', msg: `Node is root, coloring it Black. Tree is balanced.` });
+                        this.animationQueue.push({ type: 'recolor', node: node, color: BLACK });
                         return this.animationQueue;
                     }
-                }
 
-                node.parent = y;
-                if (y === null) {
-                    this.root = node;
-                } else if (node.key < y.key) {
-                    y.left = node;
-                } else {
-                    y.right = node;
-                }
-
-                this.animationQueue.push({ type: 'highlight', node: node });
-
-                if (node.parent === null) {
-                    node.color = BLACK;
-                    this.animationQueue.push({ type: 'text', msg: `Node is root, coloring it Black. Tree is balanced.` });
-                    this.animationQueue.push({ type: 'recolor', node: node, color: BLACK });
+                    if (node.parent.parent === null) {
+                        this.animationQueue.push({ type: 'text', msg: `Parent is root. Tree is balanced.` });
+                        return this.animationQueue;
+                    }
+                    
+                    this.insertFixup(node);
                     return this.animationQueue;
                 }
 
-                if (node.parent.parent === null) {
-                    this.animationQueue.push({ type: 'text', msg: `Parent is root. Tree is balanced.` });
-                    return this.animationQueue;
-                }
-
-                this.insertFixup(node);
-                return this.animationQueue;
-            }
-
-            insertFixup(k) {
-                this.animationQueue.push({ type: 'text', msg: `Checking for violations...` });
-                while (k.parent.color === RED) {
-                    this.animationQueue.push({ type: 'text', msg: `Violation: Red Node ${k.key} has a Red Parent ${k.parent.key}.` });
-                    if (k.parent === k.parent.parent.right) {
-                        const u = k.parent.parent.left;
-                        if (u.color === RED) {
-                            this.animationQueue.push({ type: 'text', msg: `Case 1: Uncle (${u.key}) is Red.` });
-                            this.animationQueue.push({ type: 'recolor', node: u, color: BLACK, msg: `Recoloring Uncle ${u.key} to Black.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
-                            k = k.parent.parent;
-                        } else {
-                            if (k === k.parent.left) {
-                                this.animationQueue.push({ type: 'text', msg: `Case 2: Uncle is Black, node is Inner Child.` });
-                                k = k.parent;
-                                this.rightRotate(k);
+                insertFixup(k) {
+                    this.animationQueue.push({ type: 'text', msg: `Checking for violations...` });
+                    while (k.parent.color === RED) {
+                        this.animationQueue.push({ type: 'text', msg: `Violation: Red Node ${k.key} has a Red Parent ${k.parent.key}.` });
+                        if (k.parent === k.parent.parent.right) {
+                            const u = k.parent.parent.left;
+                            if (u.color === RED) {
+                                this.animationQueue.push({ type: 'text', msg: `Case 1: Uncle (${u.key}) is Red.` });
+                                this.animationQueue.push({ type: 'recolor', node: u, color: BLACK, msg: `Recoloring Uncle ${u.key} to Black.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
+                                k = k.parent.parent;
+                            } else {
+                                if (k === k.parent.left) {
+                                    this.animationQueue.push({ type: 'text', msg: `Case 2: Uncle is Black, node is Inner Child.` });
+                                    k = k.parent;
+                                    this.rightRotate(k);
+                                }
+                                this.animationQueue.push({ type: 'text', msg: `Case 3: Uncle is Black, node is Outer Child.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
+                                this.leftRotate(k.parent.parent);
                             }
-                            this.animationQueue.push({ type: 'text', msg: `Case 3: Uncle is Black, node is Outer Child.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
-                            this.leftRotate(k.parent.parent);
+                        } else {
+                            const u = k.parent.parent.right;
+                            if (u.color === RED) {
+                                this.animationQueue.push({ type: 'text', msg: `Case 1: Uncle (${u.key}) is Red.` });
+                                this.animationQueue.push({ type: 'recolor', node: u, color: BLACK, msg: `Recoloring Uncle ${u.key} to Black.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
+                                k = k.parent.parent;
+                            } else {
+                                if (k === k.parent.right) {
+                                    this.animationQueue.push({ type: 'text', msg: `Case 2: Uncle is Black, node is Inner Child.` });
+                                    k = k.parent;
+                                    this.leftRotate(k);
+                                }
+                                this.animationQueue.push({ type: 'text', msg: `Case 3: Uncle is Black, node is Outer Child.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
+                                this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
+                                this.rightRotate(k.parent.parent);
+                            }
                         }
-                    } else {
-                        const u = k.parent.parent.right;
-                        if (u.color === RED) {
-                            this.animationQueue.push({ type: 'text', msg: `Case 1: Uncle (${u.key}) is Red.` });
-                            this.animationQueue.push({ type: 'recolor', node: u, color: BLACK, msg: `Recoloring Uncle ${u.key} to Black.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
-                            k = k.parent.parent;
-                        } else {
-                            if (k === k.parent.right) {
-                                this.animationQueue.push({ type: 'text', msg: `Case 2: Uncle is Black, node is Inner Child.` });
-                                k = k.parent;
-                                this.leftRotate(k);
-                            }
-                            this.animationQueue.push({ type: 'text', msg: `Case 3: Uncle is Black, node is Outer Child.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent, color: BLACK, msg: `Recoloring Parent ${k.parent.key} to Black.` });
-                            this.animationQueue.push({ type: 'recolor', node: k.parent.parent, color: RED, msg: `Recoloring Grandparent ${k.parent.parent.key} to Red.` });
-                            this.rightRotate(k.parent.parent);
+                        if (k === this.root) {
+                            break;
                         }
                     }
-                    if (k === this.root) {
-                        break;
-                    }
+                    this.root.color = BLACK;
+                    this.animationQueue.push({ type: 'text', msg: `Fix complete. Coloring root Black to ensure Property 2.` });
+                    this.animationQueue.push({ type: 'recolor', node: this.root, color: BLACK });
                 }
-                this.root.color = BLACK;
-                this.animationQueue.push({ type: 'text', msg: `Fix complete. Coloring root Black to ensure Property 2.` });
-                this.animationQueue.push({ type: 'recolor', node: this.root, color: BLACK });
-            }
 
-            deleteNode(key) {
-                // Simplified deletion for demo purposes. A full implementation is much more complex.
-                this.animationQueue = [];
-                this.animationQueue.push({ type: 'text', msg: `Deletion is complex. This is a simplified demo.` });
+                deleteNode(key) {
+                    // Simplified deletion for demo purposes. A full implementation is much more complex.
+                    this.animationQueue = [];
+                    this.animationQueue.push({ type: 'text', msg: `Deletion is complex. This is a simplified demo.` });
+                    
+                    let z = this.NIL;
+                    let node = this.root;
 
-                let z = this.NIL;
-                let node = this.root;
-
-                while (node !== this.NIL) {
-                    if (node.key === key) {
-                        z = node;
-                        break;
+                    while(node !== this.NIL) {
+                        if (node.key === key) {
+                            z = node;
+                            break;
+                        }
+                        if(node.key < key) {
+                            node = node.right;
+                        } else {
+                            node = node.left;
+                        }
                     }
-                    if (node.key < key) {
-                        node = node.right;
+
+                    if (z === this.NIL) {
+                        this.animationQueue.push({ type: 'text', msg: `Node ${key} not found.` });
+                        return this.animationQueue;
+                    }
+                    
+                    // For simplicity, this demo only handles deleting leaf nodes or nodes with one child.
+                    // A full implementation requires handling two-child case by finding successor and more complex fixup logic.
+                    if (z.left !== this.NIL && z.right !== this.NIL) {
+                        this.animationQueue.push({type: 'text', msg: 'Demo limitation: Cannot delete node with two children.'});
+                        return this.animationQueue;
+                    }
+                    
+                    this.animationQueue.push({ type: 'text', msg: `Deleting node ${key}. Rebalancing might occur.`});
+                    
+                    let x = (z.left === this.NIL) ? z.right : z.left;
+                    
+                    x.parent = z.parent;
+                    if(z.parent === null) {
+                        this.root = x;
+                    } else if (z === z.parent.left) {
+                        z.parent.left = x;
                     } else {
-                        node = node.left;
+                        z.parent.right = x;
                     }
-                }
 
-                if (z === this.NIL) {
-                    this.animationQueue.push({ type: 'text', msg: `Node ${key} not found.` });
+                    if (z.color === BLACK) {
+                        this.animationQueue.push({ type: 'text', msg: `Deleted node was Black. Fixup required. (Full fixup logic is complex and not fully implemented here).`});
+                        // a full deleteFixup would go here.
+                    }
+
+                    this.animationQueue.push({ type: 'draw' });
                     return this.animationQueue;
                 }
-
-                // For simplicity, this demo only handles deleting leaf nodes or nodes with one child.
-                // A full implementation requires handling two-child case by finding successor and more complex fixup logic.
-                if (z.left !== this.NIL && z.right !== this.NIL) {
-                    this.animationQueue.push({ type: 'text', msg: 'Demo limitation: Cannot delete node with two children.' });
-                    return this.animationQueue;
-                }
-
-                this.animationQueue.push({ type: 'text', msg: `Deleting node ${key}. Rebalancing might occur.` });
-
-                let x = (z.left === this.NIL) ? z.right : z.left;
-
-                x.parent = z.parent;
-                if (z.parent === null) {
-                    this.root = x;
-                } else if (z === z.parent.left) {
-                    z.parent.left = x;
-                } else {
-                    z.parent.right = x;
-                }
-
-                if (z.color === BLACK) {
-                    this.animationQueue.push({ type: 'text', msg: `Deleted node was Black. Fixup required. (Full fixup logic is complex and not fully implemented here).` });
-                    // a full deleteFixup would go here.
-                }
-
-                this.animationQueue.push({ type: 'draw' });
-                return this.animationQueue;
             }
-        }
 
-        document.addEventListener('DOMContentLoaded', () => {
             const canvas = document.getElementById('rb-canvas');
             const ctx = canvas.getContext('2d');
             const container = canvas.parentElement;
@@ -465,8 +444,16 @@
             let highlightedNode = null;
 
             const NODE_RADIUS = 20;
-            const H_SPACING = 40;
+            const H_SPACING_BASE = 60; // Base horizontal spacing between nodes for initial layout
             const V_SPACING = 70;
+
+            // Pan and Zoom state
+            let panX = 0;
+            let panY = 0;
+            let scale = 1.0;
+            let isDragging = false;
+            let lastMouseX = 0;
+            let lastMouseY = 0;
 
             function resizeCanvas() {
                 canvas.width = container.clientWidth;
@@ -474,16 +461,17 @@
                 drawTree();
             }
 
-            function setNodePositions(node, x, y, xOffset) {
+            // Function to calculate node positions in "world" coordinates
+            function calculateNodePositions(node, x, y, xOffset) {
                 if (node === tree.NIL) return;
                 node.x = x;
                 node.y = y;
-                setNodePositions(node.left, x - xOffset, y + V_SPACING, xOffset / 2);
-                setNodePositions(node.right, x + xOffset, y + V_SPACING, xOffset / 2);
+                calculateNodePositions(node.left, x - xOffset, y + V_SPACING, xOffset / 2);
+                calculateNodePositions(node.right, x + xOffset, y + V_SPACING, xOffset / 2);
             }
 
             function drawNode(node) {
-                if (node === tree.NIL) return;
+                if (node === tree.NIL) return; 
 
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, NODE_RADIUS, 0, 2 * Math.PI);
@@ -492,12 +480,12 @@
 
                 if (highlightedNode === node) {
                     ctx.strokeStyle = '#5A96E3';
-                    ctx.lineWidth = 4;
+                    ctx.lineWidth = 4 / scale; 
                     ctx.stroke();
                 }
 
                 ctx.fillStyle = 'white';
-                ctx.font = 'bold 16px Inter';
+                ctx.font = `bold ${16 / scale}px Inter`; 
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 ctx.fillText(node.key, node.x, node.y);
@@ -509,7 +497,7 @@
                 ctx.moveTo(fromNode.x, fromNode.y);
                 ctx.lineTo(toNode.x, toNode.y);
                 ctx.strokeStyle = '#cccccc';
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 2 / scale; 
                 ctx.stroke();
             }
 
@@ -519,16 +507,41 @@
                 drawEdge(node, node.right);
                 drawTreeRecursive(node.left);
                 drawTreeRecursive(node.right);
-                drawNode(node);
+                drawNode(node); 
             }
 
             function drawTree() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.save(); 
+
+                // Apply pan and zoom transforms
+                ctx.translate(panX, panY);
+                ctx.scale(scale, scale);
+
                 if (tree.root !== tree.NIL) {
-                    const treeWidth = canvas.width / 2.5;
-                    setNodePositions(tree.root, canvas.width / 2, 50, treeWidth);
+                    // Calculate tree depth for better initial spread
+                    let maxDepth = 0;
+                    if (tree.root.key !== null) { // Check if root is not NIL
+                        let queue = [{node: tree.root, depth: 0}];
+                        let head = 0;
+                        while(head < queue.length) {
+                            let {node, depth} = queue[head++];
+                            maxDepth = Math.max(maxDepth, depth);
+                            if (node.left !== tree.NIL) queue.push({node: node.left, depth: depth + 1});
+                            if (node.right !== tree.NIL) queue.push({node: node.right, depth: depth + 1});
+                        }
+                    }
+
+                    // Adjust initial xOffset based on estimated tree width at deepest level
+                    const estimatedMaxLeaves = Math.pow(2, maxDepth);
+                    const initialXOffset = Math.max(H_SPACING_BASE, estimatedMaxLeaves * NODE_RADIUS * 1.5);
+                    
+                    // Calculate node positions relative to the scaled origin (0, 0) of the canvas
+                    calculateNodePositions(tree.root, canvas.width / (2 * scale), 50 / scale, initialXOffset / scale);
                     drawTreeRecursive(tree.root);
                 }
+
+                ctx.restore(); 
             }
 
             const explanationEl = document.getElementById('explanation-text');
@@ -557,12 +570,12 @@
                         explanationEl.scrollTop = explanationEl.scrollHeight;
                     } else if (action.type === 'recolor') {
                         action.node.color = action.color;
-                        if (action.msg) {
-                            const p = document.createElement('p');
-                            p.textContent = action.msg;
-                            p.className = 'text-gray-700 p-2 bg-green-100/50 rounded-md';
-                            explanationEl.appendChild(p);
-                            explanationEl.scrollTop = explanationEl.scrollHeight;
+                        if(action.msg) {
+                           const p = document.createElement('p');
+                           p.textContent = action.msg;
+                           p.className = 'text-gray-700 p-2 bg-green-100/50 rounded-md';
+                           explanationEl.appendChild(p);
+                           explanationEl.scrollTop = explanationEl.scrollHeight;
                         }
                         drawTree();
                     } else if (action.type === 'highlight') {
@@ -574,6 +587,60 @@
                     step++;
                 }, 800);
             }
+
+            // Pan functionality
+            canvas.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                lastMouseX = e.clientX;
+                lastMouseY = e.clientY;
+                canvas.style.cursor = 'grabbing';
+            });
+
+            canvas.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    const dx = e.clientX - lastMouseX;
+                    const dy = e.clientY - lastMouseY;
+                    panX += dx;
+                    panY += dy;
+                    lastMouseX = e.clientX;
+                    lastMouseY = e.clientY;
+                    drawTree();
+                }
+            });
+
+            canvas.addEventListener('mouseup', () => {
+                isDragging = false;
+                canvas.style.cursor = 'grab';
+            });
+
+            canvas.addEventListener('mouseout', () => {
+                isDragging = false; 
+                canvas.style.cursor = 'grab';
+            });
+
+            canvas.style.cursor = 'grab'; 
+
+
+            // Zoom functionality
+            canvas.addEventListener('wheel', (e) => {
+                e.preventDefault(); 
+
+                const zoomIntensity = 0.1;
+                const newScale = scale * (1 + (e.deltaY < 0 ? zoomIntensity : -zoomIntensity));
+                scale = Math.max(0.1, Math.min(3.0, newScale)); 
+
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+
+                const worldX = (mouseX - panX) / (scale / (1 + (e.deltaY < 0 ? zoomIntensity : -zoomIntensity)));
+                const worldY = (mouseY - panY) / (scale / (1 + (e.deltaY < 0 ? zoomIntensity : -zoomIntensity)));
+
+                panX = mouseX - worldX * scale;
+                panY = mouseY - worldY * scale;
+
+                drawTree();
+            });
 
 
             document.getElementById('insert-btn').addEventListener('click', () => {
@@ -593,10 +660,17 @@
                     document.getElementById('node-value').value = '';
                 }
             });
+            
+            document.getElementById('reset-view-btn').addEventListener('click', () => {
+                panX = 0;
+                panY = 0;
+                scale = 1.0;
+                drawTree();
+            });
 
             window.addEventListener('resize', resizeCanvas);
             resizeCanvas();
-
+            
             // Smooth scroll for nav links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -609,5 +683,4 @@
         });
     </script>
 </body>
-
 </html>
